@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+
+    <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+        <resetJUL>true</resetJUL>
+    </contextListener>
+
+    <!-- To enable JMX Management -->
+    <jmxConfigurator/>
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%date{YYYY-MM-dd HH:mm:ss} %level [%thread] %logger{10}
+                [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${catalina.home}/logs/tqs/tqs.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>${catalina.home}/logs/tqs/tqs.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%date{YYYY-MM-dd HH:mm:ss} %level [%thread] %logger{10}
+                [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <!--<appender name="HIKARI" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+        <!--<file>${catalina.home}/logs/tqs/hikari.log</file>-->
+        <!--<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+            <!--&lt;!&ndash; daily rollover &ndash;&gt;-->
+            <!--<fileNamePattern>${catalina.home}/logs/tqs/hikari.%d{yyyy-MM-dd}.log</fileNamePattern>-->
+            <!--<maxHistory>30</maxHistory>-->
+        <!--</rollingPolicy>-->
+        <!--<encoder>-->
+            <!--<pattern>%date{YYYY-MM-dd HH:mm:ss} %level [%thread] %logger{10}-->
+                <!--[%file:%line] %msg%n</pattern>-->
+        <!--</encoder>-->
+    <!--</appender>-->
+
+
+    <appender name="clounge" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${catalina.home}/logs/tqs/clounge.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${catalina.home}/logs/tqs/clounge.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%date{YYYY-MM-dd HH:mm:ss} %level [%thread] %logger{10}
+                [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="cl_nip" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${catalina.home}/logs/tqs/cl_nip.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${catalina.home}/logs/tqs/cl_nip.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%date{YYYY-MM-dd HH:mm:ss} %level [%thread] %logger{10}
+                [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <appender name="merchantPay" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${catalina.home}/logs/tqs/merchantPay.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>${catalina.home}/logs/tqs/merchantPay.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%date{YYYY-MM-dd HH:mm:ss} %level [%thread] %logger{10}
+                [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <appender name="ebills" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${catalina.home}/logs/tqs/ebills.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>${catalina.home}/logs/tqs/ebills.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%date{YYYY-MM-dd HH:mm:ss} %level [%thread] %logger{10}
+                [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <appender name="hibernate" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${catalina.home}/logs/tqs/hibernate.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>${catalina.home}/logs/tqs/hibernate.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%date{YYYY-MM-dd HH:mm:ss} %level [%thread] %logger{10}
+                [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="ussd" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${catalina.home}/logs/tqs/ussd.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>${catalina.home}/logs/tqs/ussd.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%date{YYYY-MM-dd HH:mm:ss} %level [%thread] %logger{10}
+                [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <logger name="com.nibss.tqs.ussd.merchantpay" level="TRACE" additivity="false">
+        <appender-ref ref="merchantPay" />
+    </logger>
+
+    <logger name="com.nibss.tqs.ebillspay.billing" level="TRACE" additivity="false">
+        <appender-ref ref="ebills" />
+    </logger>
+
+    <logger name="com.nibss.tqs.ussd" level="TRACE" additivity="false">
+        <appender-ref ref="ussd"/>
+    </logger>
+
+
+    <logger name="com.nibss.tqs.corporatelounge" level="TRACE" additivity="false">
+        <appender-ref ref="clounge" />
+    </logger>
+
+
+    <logger name="com.nibss.tqs.controllers.CorporateLoungeApiController" level="TRACE" additivity="false">
+        <appender-ref ref="clounge" />
+    </logger>
+
+    <logger name="com.nibss.nip.webservice" additivity="false" level="trace">
+        <appender-ref ref="cl_nip" />
+    </logger>
+
+    <!--<logger name="com.zaxxer.hikari" level="TRACE" additivity="false">-->
+        <!--<appender-ref ref="HIKARI"/>-->
+    <!--</logger>-->
+    
+    <logger name="org.hibernate" level="INFO" additivity="false">
+        <appender-ref ref="hibernate" />
+    </logger>
+
+    <logger name="org.hibernate.stat" level="DEBUG" additivity="false">
+        <appender-ref ref="hibernate" />
+    </logger>
+
+    <logger name="org.hibernate.sql" level="DEBUG" additivity="false">
+        <appender-ref ref="hibernate" />
+    </logger>
+
+<!--    <logger name="org.hibernate.type" level="DEBUG" additivity="false">
+        <appender-ref ref="hibernate" />
+    </logger>-->
+
+    <logger name="com.nibss" level="TRACE" additivity="false">
+        <appender-ref ref="FILE" />
+    </logger>
+    <logger name="org.hibernate" level="WARN" additivity="false">
+        <appender-ref ref="FILE" />
+    </logger>
+    <root level="warn">
+        <appender-ref ref="FILE"/>
+    </root>
+
+</configuration>

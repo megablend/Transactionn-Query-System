@@ -1,0 +1,75 @@
+body {
+    /*background-color: whitesmoke;*/
+
+}
+
+table td {
+    border-bottom: 1px solid gray;
+    padding: 2px 5px 10px 2px;
+}
+
+.login-box-body {
+    border-radius: 4px 2pc;
+    padding: 20px 10px 30px 10px;
+}
+
+.login-box-msg {
+    color: #9C7F18;
+    font-weight:bold;
+    text-shadow: black 1px 1px;
+    font-size: 1.3em;
+}
+
+.login-box-msg strong {
+    color: red;
+    font-weight: bolder;
+    font-size: smaller;
+}
+.login-logo {
+    text-align: center;
+}
+
+.login-logo img {
+    display: inline-block;
+    background: transparent;
+}
+.invalid {
+    border-color: #dd4b39;
+    box-shadow: none;
+    color:#dd4b39;
+}
+.valid {
+    color: #00a65a;
+    border-color: #00a65a;
+}
+.navbar-static-top {
+    z-index: 0;
+}
+.main-header {
+    z-index: 900;
+}
+table tr td {
+    white-space: nowrap;
+}
+#transactionTable, .myDataTable {
+
+    font-size:smaller;
+}
+.mydtProc {
+    font-size:0.3em;
+    padding-left: 10px;
+    color: red;
+}
+.dtSearchBox {
+    margin-left: 100px;
+}
+.dtSearchBox input[type=search] {
+    width: 100%;
+}
+.form-group .mySelect2,.mySelect2 {
+    width: 100%;
+}
+
+.bg-success, .bg-warning,.bg-danger {
+    padding: 15px 15px;
+}

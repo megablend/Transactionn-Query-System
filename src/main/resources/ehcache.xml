@@ -1,0 +1,152 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="ehcache.xsd"
+         updateCheck="false"
+         monitoring="autodetect"
+         dynamicConfig="true"
+        >
+
+    <diskStore path="java.io.tmpdir"/>
+
+    <!-- maxEntriesLocalHeap="10000"
+           maxEntriesLocalDisk="1000"
+           -->
+    <cache name="ebillspayBillers"
+           maxEntriesLocalHeap="100"
+           maxEntriesLocalDisk="1000"
+           eternal="false"
+           diskSpoolBufferSizeMB="20"
+           timeToIdleSeconds="300" timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+        <persistence strategy="localTempSwap" />
+    </cache>
+
+    <cache name="userEnteredParams"
+           maxEntriesLocalHeap="100"
+           maxEntriesLocalDisk="1000"
+           eternal="false"
+           diskSpoolBufferSizeMB="20"
+           timeToIdleSeconds="300" timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+        <persistence strategy="localTempSwap" />
+    </cache>
+
+    <cache name="products"
+           maxEntriesLocalHeap="100"
+           maxEntriesLocalDisk="200"
+           eternal="false"
+           diskSpoolBufferSizeMB="1"
+           timeToIdleSeconds="300" timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+        <persistence strategy="localTempSwap" />
+    </cache>
+
+    <cache name="roles"
+           maxEntriesLocalHeap="5"
+           maxEntriesLocalDisk="10"
+           eternal="false"
+           diskSpoolBufferSizeMB="1"
+           timeToIdleSeconds="3000" timeToLiveSeconds="60000"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+        <persistence strategy="localTempSwap" />
+    </cache>
+
+    <cache name="cpayMerchants"
+           maxEntriesLocalHeap="100"
+           maxEntriesLocalDisk="200"
+           eternal="false"
+           diskSpoolBufferSizeMB="1"
+           timeToIdleSeconds="300" timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+        <persistence strategy="localTempSwap" />
+    </cache>
+
+    <cache name="ussdBillers"
+           maxEntriesLocalHeap="100"
+           maxEntriesLocalDisk="200"
+           eternal="false"
+           diskSpoolBufferSizeMB="1"
+           timeToIdleSeconds="60" timeToLiveSeconds="60"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+        <persistence strategy="localTempSwap" />
+    </cache>
+
+    <cache name="merchantPay"
+           maxEntriesLocalHeap="100"
+           maxEntriesLocalDisk="200"
+           eternal="false"
+           diskSpoolBufferSizeMB="1"
+           timeToIdleSeconds="300" timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+        <persistence strategy="localTempSwap" />
+    </cache>
+
+    <cache name="clClients"
+           maxEntriesLocalDisk="80"
+           maxEntriesLocalHeap="100"
+           eternal="false"
+           diskSpoolBufferSizeMB="1"
+           timeToIdleSeconds="60"
+           timeToLiveSeconds="60"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+        <persistence strategy="localTempSwap" />
+    </cache>
+
+    <cache name="clBanks"
+           maxEntriesLocalDisk="5"
+           maxEntriesLocalHeap="15"
+           eternal="false"
+           diskSpoolBufferSizeMB="1"
+           timeToIdleSeconds="300"
+           timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+        <persistence strategy="localTempSwap" />
+    </cache>
+
+
+    <cache name="organizations"
+           maxEntriesLocalHeap="15"
+           maxEntriesLocalDisk="50"
+           eternal="false"
+           diskSpoolBufferSizeMB="1"
+           timeToIdleSeconds="300"
+           timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+        <persistence strategy="localTempSwap" />
+    </cache>
+
+    <cache name="clOrgAccts"
+           maxEntriesLocalDisk="70"
+           maxEntriesLocalHeap="100"
+           eternal="false"
+           diskSpoolBufferSizeMB="1"
+           timeToIdleSeconds="300"
+           timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+        <persistence strategy="localTempSwap" />
+    </cache>
+
+    <cache name="cpayResponses"
+           maxEntriesLocalDisk="70"
+           maxEntriesLocalHeap="100"
+           eternal="false"
+           diskSpoolBufferSizeMB="1"
+           timeToIdleSeconds="300"
+           timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+        <persistence strategy="localTempSwap" />
+    </cache>
+
+
+ </ehcache>

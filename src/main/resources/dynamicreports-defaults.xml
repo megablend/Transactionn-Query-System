@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DynamicReports>
+    <!-- DEFAULT FONT -->
+    <font fontName="Century Gothic" fontSize="10" pdfFontName="Helvetica" pdfEncoding="Cp1252" pdfEmbedded="false"/>
+    <!-- DEFAULT DATA TYPES -->
+    <bigDecimalType pattern="#,##0.00#" horizontalAlignment="RIGHT"/>
+    <dateType pattern="dd/MM/yyyy" horizontalAlignment="RIGHT"/>
+    <!--<dateType pattern="MM/dd/yyyy" horizontalAlignment="RIGHT"/>-->
+    <dateYearToMonthType pattern="MM/yyyy" horizontalAlignment="RIGHT"/>
+    <dateYearToHourType pattern="dd/MM/yyyy h a" horizontalAlignment="RIGHT"/>
+    <dateYearToMinuteType pattern="dd/MM/yyyy h:mm a" horizontalAlignment="RIGHT"/>
+    <dateYearToSecondType pattern="dd/MM/yyyy h:mm:ss a" horizontalAlignment="RIGHT"/>
+    <!--<dateYearToSecondType pattern="MM/dd/yyyy h:mm:ss a" horizontalAlignment="RIGHT"/>-->
+
+</DynamicReports>

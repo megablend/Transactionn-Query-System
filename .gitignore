@@ -1,0 +1,12 @@
+.settings/
+.project
+*.classes
+target/
+.springBeans
+.classpath
+.mvn/
+.idea/
+*.iml
+activemq-data/
+logs/
+src/main/resources/rebel.xml
